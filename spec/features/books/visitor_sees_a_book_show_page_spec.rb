@@ -6,7 +6,7 @@ describe "Visitor" do
       book = Book.create(title: "Foo")
       review = book.reviews.create(text: "qwerty")
       user = User.create(name: "Mr. Bar")
-      
+
       visit book_path(book)
 
       expect(page).to have_content(book.title)
