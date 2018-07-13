@@ -4,9 +4,9 @@ describe "Visitor" do
   context "visits book show page" do
     it "see the book title and a list of reviews for that book." do
       book = Book.create(title: "Foo")
+      review = book.reviews.create(text: "qwerty")
       user = User.create(name: "Mr. Bar")
-      review = user.reviews.create(text: "qwerty")
-
+      
       visit book_path(book)
 
       expect(page).to have_content(book.title)
