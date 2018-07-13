@@ -3,8 +3,8 @@ require 'rails_helper'
 describe "visitor" do
   context "visits the book index page" do
     it "see all book titles in the database" do
-      book1 = Book.new(title: "foo")
-      book2 = Book.new(title: "bar")
+      book1 = Book.create(title: "foo")
+      book2 = Book.create(title: "bar")
       visit books_path
 
       expect(page).to have_content(book1.title)
