@@ -13,6 +13,7 @@ describe "Visitor" do
       expect(page).to have_content(user.name)
       expect(page).to have_content(review.title)
     end
+
   end
 end
 
